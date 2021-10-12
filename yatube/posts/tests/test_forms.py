@@ -109,7 +109,7 @@ class PostFormTest(TestCase):
                                  expected or None)
 
     def test_create_post_by_unauthorized_user(self):
-        """Проверка: неавторизованный пользователь не может \
+        """Проверка: неавторизованный пользователь не может
         создать новый пост"""
         posts_count = Post.objects.count()
         form_data = {'text': 'Текст от неавторизованного пользователя',
@@ -123,7 +123,7 @@ class PostFormTest(TestCase):
         self.assertEqual(Post.objects.count(), posts_count)
 
     def test_add_comment_by_unauthorized_user(self):
-        """Проверка: неавторизованный пользователь не может \
+        """Проверка: неавторизованный пользователь не может
         оставлять комментарии"""
         comments_count = Comment.objects.count()
         post = PostFormTest.post
